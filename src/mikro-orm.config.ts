@@ -1,4 +1,5 @@
 import { Options } from "@mikro-orm/core";
+import { TsMorphMetadataProvider } from "@mikro-orm/reflection";
 
 const config: Options = {
     type: 'postgresql',
@@ -8,7 +9,8 @@ const config: Options = {
     password: 'postgres',
     dbName: 'nestjs-tutorial',
     entities: ['dist/**/*.entity.js'],
-    entitiesTs:['src/**/*.entity.ts']
+    entitiesTs:['src/**/*.entity.ts'],
+    metadataProvider: TsMorphMetadataProvider
 }
 
 export default config;
