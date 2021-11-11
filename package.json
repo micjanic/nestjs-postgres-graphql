@@ -24,6 +24,7 @@
     "@mikro-orm/core": "^4.5.9",
     "@mikro-orm/nestjs": "^4.3.1",
     "@mikro-orm/postgresql": "^4.5.9",
+    "@mikro-orm/reflection": "^4.5.9",
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/graphql": "^9.1.1",
@@ -74,5 +75,12 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
   }
 }
